@@ -29,35 +29,39 @@
                 </div>
                 <div>
                     <h4 class="font-medium mb-1 ">Memory</h4>
-                    <button class="border border-gray-400 rounded-md p-1 mb-1 text-sm font-extralight select-hover">8GB
+                    <button value="0" id="memory-8gb"
+                        class="border border-gray-400 rounded-md p-1 mb-1 text-sm font-extralight select-hover">8GB
                         unified
                         memory</button>
-                    <button class="border border-gray-400 rounded-md p-1 text-sm font-extralight select-hover">16GB
+                    <button value="180" id="memory-16gb"
+                        class="border border-gray-400 rounded-md p-1 text-sm font-extralight select-hover">16GB
                         unified
                         memory</button>
                 </div>
                 <div>
                     <h4 class="font-medium mb-1">Storage</h4>
-                    <button
+                    <button value="0" id="storage-256gb"
                         class="border border-gray-400 rounded-md p-1 mb-1 text-sm font-extralight select-hover">256GB
                         SSD
                         storage</button>
-                    <button
+                    <button value="100" id="storage-512gb"
                         class="border border-gray-400 rounded-md p-1 mb-1 text-sm font-extralight select-hover">512GB
                         SSD
                         storage</button>
-                    <button class="border border-gray-400 rounded-md p-1 text-sm font-extralight select-hover">1TB SSD
+                    <button value="180" id="storage-1tb"
+                        class="border border-gray-400 rounded-md p-1 text-sm font-extralight select-hover">1TB SSD
                         storage</button>
                 </div>
                 <div>
                     <h4 class="font-medium mb-1">Choose Your Delivery Option</h4>
-                    <button
+                    <button value="0" id="delivery-free"
                         class="border border-gray-400 rounded-md p-1 mb-1 text-sm font-extralight select-hover">Friday,
                         August
                         25 Free
                         Primary
                         Delivery</button>
-                    <button class="border border-gray-400 rounded-md p-1 text-sm font-extralight select-hover">Friday,
+                    <button value="20" id="delivery-express"
+                        class="border border-gray-400 rounded-md p-1 text-sm font-extralight select-hover">Friday,
                         August 21
                         Delivery Charge
                         $20</button>
@@ -77,15 +81,15 @@
                     </div>
 
                     <div class="">
-                        <h4 class="my-2">$1299</h4>
+                        <h4 class="my-2">$ <span id="price">1299</span></h4>
                         <hr class="border border-gray-300 w-1/4">
-                        <h4 class="my-2">$0</h4>
+                        <h4 class="my-2">$ <span id="memory-cost">0</span></h4>
                         <hr class="border border-gray-300 w-1/4">
-                        <h4 class="my-2">$0</h4>
+                        <h4 class="my-2">$ <span id="storage-cost">0</span></h4>
                         <hr class="border border-gray-300 w-1/4">
-                        <h4 class="my-2">$0</h4>
+                        <h4 class="my-2">$ <span id="delivery-cost">0</span></h4>
                         <hr class="border border-black w-1/4">
-                        <h4 class="my-2">$1299</h4>
+                        <h4 class="my-2">$ <span id="total-price">1299</span></h4>
                     </div>
                     <div>
                         <h2 class="font-normal	">Add Coupon</h2>
