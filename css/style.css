@@ -1,0 +1,10 @@
+.select-hover:hover {
+    background-color: rgb(16, 180, 245);
+    color: white;
+    font-weight: 400;
+  }
+.apply-hover:hover {
+    background-color: rgb(16, 180, 245);
+    color: white;
+    font-weight: 400;
+  }
