@@ -75,12 +75,16 @@ function calculateTotal() {
     const memoryPrice = getProductValue('memory');
     const storagePrice = getProductValue('storage');
     const deliveryPrice = getProductValue('delivery');
+
     const totalPrice = macPrice + memoryPrice + storagePrice + deliveryPrice;
 
     document.getElementById('total-price').innerText = totalPrice;
     const totalID = document.getElementById('total');
     totalID.innerText = totalPrice;
     getDiscount(totalPrice);
+    document.getElementById('coupon-code').innerText = '';
+
+
 };
 
 
@@ -98,7 +102,7 @@ function getDiscount(totalPrice) {
         else {
             document.getElementById('total').innerText = totalPrice;
         }
-    })
+    });
 
 };
 
