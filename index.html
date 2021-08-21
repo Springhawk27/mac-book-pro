@@ -13,8 +13,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
+<!-- body start here -->
+
 <body>
+    <!-- main section start here -->
     <main>
+        <!-- top section  -->
         <section class="grid grid-cols-2 gap-12 m-4 px-12 mt-8 mx-8">
             <div>
                 <img class="px-8 mx-4" src="images/mac.png" alt="">
@@ -27,6 +31,7 @@
                         Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbolt / USB ports Magic Mouse Magic
                         Keyboard US English</p>
                 </div>
+                <!-- memory section  -->
                 <div>
                     <h4 class="font-medium mb-1 ">Memory</h4>
                     <button value="0" id="8gb-cost"
@@ -38,6 +43,7 @@
                         unified
                         memory</button>
                 </div>
+                <!-- storage section  -->
                 <div>
                     <h4 class="font-medium mb-1">Storage</h4>
                     <button value="0" id="256gb-cost"
@@ -52,6 +58,7 @@
                         class="border border-gray-400 rounded-md p-1 text-sm font-extralight select-hover">1TB SSD
                         storage</button>
                 </div>
+                <!-- delivery section  -->
                 <div>
                     <h4 class="font-medium mb-1">Choose Your Delivery Option</h4>
                     <button value="0" id="delivery-free-cost"
@@ -66,6 +73,8 @@
                         Delivery Charge
                         $20</button>
                 </div>
+
+                <!-- checkout section  -->
                 <div class="grid grid-cols-2 font-medium ">
 
                     <div class="">
@@ -91,6 +100,8 @@
                         <hr class="border border-black w-1/4">
                         <h4 class="my-2">$ <span id="total-price">1299</span></h4>
                     </div>
+
+                    <!-- coupon section  -->
                     <div>
                         <h2 class="font-normal">Add Coupon</h2>
                         <input id="coupon-code" class="border border-gray-400 rounded-md p-1 mb-1" type="text">
@@ -104,6 +115,7 @@
             </div>
         </section>
         <hr>
+        <!-- bottom section - total section with/without discount -->
         <section>
             <h1 class="text-4xl font-medium my-8 text-center">Total: $ <span id="total">1299</span></h1>
         </section>

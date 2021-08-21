@@ -82,9 +82,6 @@ function calculateTotal() {
     const totalID = document.getElementById('total');
     totalID.innerText = totalPrice;
     getDiscount(totalPrice);
-    document.getElementById('coupon-code').innerText = '';
-
-
 };
 
 
@@ -103,7 +100,6 @@ function getDiscount(totalPrice) {
             document.getElementById('total').innerText = totalPrice;
         }
     });
-
 };
 
 
