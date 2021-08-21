@@ -1,6 +1,13 @@
+// mac section
+const macCost = document.getElementById('mac-cost');
+const macPrice = macCost.innerText;
+calculateTotl();
+
+
+
 // memory section
-const memory8GB = document.getElementById('memory-8gb');
-const memory16GB = document.getElementById('memory-16gb');
+const memory8GB = document.getElementById('8gb-cost');
+const memory16GB = document.getElementById('16gb-cost');
 
 memory8GB.addEventListener('click', function () {
     // const memoryCost8GB = document.getElementById('memory-cost');
@@ -20,17 +27,16 @@ function updateMemoryCost(memory) {
     memoryCost.innerText = memory.value;
 
 
-    updateTotalPrice();
-
+    calculateTotl();
 };
 
 
 
 
 // storage section
-const storage256GB = document.getElementById('storage-256gb');
-const storage512GB = document.getElementById('storage-512gb');
-const storage1TB = document.getElementById('storage-1tb');
+const storage256GB = document.getElementById('256gb-cost');
+const storage512GB = document.getElementById('512gb-cost');
+const storage1TB = document.getElementById('1tb-cost');
 
 storage256GB.addEventListener('click', function () {
     updateStorageCost(storage256GB);
@@ -47,8 +53,7 @@ function updateStorageCost(storage) {
     storageCost.innerText = storage.value;
 
 
-    updateTotalPrice();
-
+    calculateTotl();
 
 };
 
@@ -56,8 +61,8 @@ function updateStorageCost(storage) {
 
 
 // delivery option section
-const deliveryFree = document.getElementById('delivery-free');
-const delivryExpress = document.getElementById('delivery-express');
+const deliveryFree = document.getElementById('delivery-free-cost');
+const delivryExpress = document.getElementById('delivery-express-cost');
 
 deliveryFree.addEventListener('click', function () {
     updateDeliveryCost(deliveryFree);
@@ -70,8 +75,7 @@ function updateDeliveryCost(delivery) {
     const deliveryCost = document.getElementById('delivery-cost');
     deliveryCost.innerText = delivery.value;
 
-    updateTotalPrice();
-
+    calculateTotl();
 
 };
 
@@ -80,16 +84,52 @@ function updateDeliveryCost(delivery) {
 
 
 
-
-// update total price
-
-function updateTotalPrice() {
-    const totalPrice = document.getElementById('total-price');
-    const price = document.getElementById('price');
-
-    const totalPrice1 = parseFloat(price) + parseFloat(memoryCost) + parseFloat(storageCost) + parseFloat(deliveryCost);
-    totalPrice.innerText = totalPrice1;
-
-
+function getProductValue(product) {
+    const productID = document.getElementById(product + '-cost');
+    const productCost = parseFloat(productID.innerText);
+    return productCost;
 }
+
+function calculateTotl() {
+    // const phoneInput = document.getElementById('phone-number');
+    // const phoneNumber = parseInt(phoneInput.value);
+    const macPrice = getProductValue('mac');
+    const memoryPrice = getProductValue('memory');
+    const storagePrice = getProductValue('storage');
+    const deliveryPrice = getProductValue('delivery');
+    const totalPrice = macPrice + memoryPrice + storagePrice + deliveryPrice;
+
+    document.getElementById('total-price').innerText = totalPrice;
+    document.getElementById('total').innerText = totalPrice;
+
+    const coupon = document.getElementById('coupon');
+    coupon.addEventListener('click', function () {
+        const couponCode = document.getElementById('coupon-code');
+        const couponValue = couponCode.value;
+
+        if (couponValue == 'stevekaku') {
+            document.getElementById('total').innerText = totalPrice - (totalPrice * (20 / 100));
+
+        }
+    })
+
+
+
+
+};
+
+// const coupon = document.getElementById('coupon');
+// coupon.addEventListener('click', function () {
+//     const couponCode = document.getElementById('coupon-code');
+//     const couponValue = couponCode.value;
+
+//     if (couponValue == 'stevekaku') {
+//         document.getElementById('total').innerText = totalPrice - (totalPrice * (20 / 100));
+
+//     }
+// })
+
+
+
+
 
