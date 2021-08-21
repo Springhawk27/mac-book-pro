@@ -111,6 +111,10 @@ function calculateTotl() {
             document.getElementById('total').innerText = totalPrice - (totalPrice * (20 / 100));
 
         }
+        else {
+            document.getElementById('total').innerText = totalPrice;
+
+        }
     })
 
 
